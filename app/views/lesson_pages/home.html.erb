@@ -1,2 +1,21 @@
-<h1>LessonPages#home</h1>
-<p>Find me in app/views/lesson_pages/home.html.erb</p>
+<header>
+	<h2>Lessons</h2>
+</header>
+
+<nav>
+	<ul class="chapter-list">
+		<% @chapters.each do |c| %>
+			<li class="chapter-list-item"><%= link_to c.title, lesson_pages_home_path(c.id) %></li>		
+		<% end %>
+	</ul>
+</nav>
+
+<section id="content" class="clear">
+	<h3><%= @chapter.title %></h3>
+
+	<% @chapter.lessons.each do |l| %>
+		<div class="lesson">
+			<%= l.title %>
+		</div>
+	<% end %>
+</section>

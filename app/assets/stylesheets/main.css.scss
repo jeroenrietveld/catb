@@ -2,6 +2,7 @@
 
 body {
 	font-family: "Hammersmith One";
+	background-color: #F4F4F4;
 }
 
 header {
@@ -28,7 +29,7 @@ header {
 	}
 }
 
-nav {
+#menu {
 	width: 800px;
 	margin: 0 auto;
 
@@ -39,11 +40,8 @@ nav {
 		li {
 			display: inline-block;
 			margin: 10px;
-			background-color: #4ED487;
 			width: 200px;
 			height: 50px;
-
-			border-bottom: 4px solid darken(#4ED487, 10%);
 
 			a {
 				display: block;
@@ -55,16 +53,85 @@ nav {
 				margin-top: 15px;
 			}
 		}
+
+		#home {
+			background-color: #17B4D9;
+			border-bottom: 4px solid darken(#17B4D9, 10%);
+		}
+
+		#questions {
+			background-color: #5F38F6;
+			border-bottom: 4px solid darken(#5F38F6, 10%);
+		}
+
+		#discussion {
+			background-color: #BE55CB;
+			border-bottom: 4px solid darken(#BE55CB, 10%);
+		}
 	}
 }
 
 #container {
 	width: 800px;
-	margin: 0 auto;
+	margin: 20px auto;
+	background-color: #FFF;
 
 	h1 {
 		margin: 20px 0;
 		text-align: center;
 		font-size: 36px;
 	}
+	h2 {
+		color: #FFF;
+		font-size: 24px;
+	}
+
+	header {
+		border: none;
+		height: 20px;
+		margin: 0;
+	}
+
+	section {
+		padding: 20px;
+	}
+
+	nav {
+
+		.chapter-list {
+			list-style-type: none;
+			text-align: center;
+
+			.chapter-list-item {
+				margin: 0;
+				display: inline-block;
+				width: 150px;
+				padding: 10px;
+				height: 20px;
+				float: left;
+				background-color: darken(#4ED487, 10%);
+
+				a {
+					display: block;
+					width: 100%;
+					height: 100%;
+					text-decoration: none;
+					color: #FFF;
+				}
+			}
+		}
+	}
+}
+
+#content {
+	color: #000;
+
+	h3 {
+		font-size: 20px;
+		text-align: center;
+	}
+}
+
+.clear {
+	clear: both;
 }

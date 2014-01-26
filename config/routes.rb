@@ -1,5 +1,6 @@
 Catb::Application.routes.draw do
   get "lesson_pages/home"
+  get "lesson_pages/home/:chapter" => 'lesson_pages#home'
   get "lesson_pages/questions"
   get "lesson_pages/discussion"
 
