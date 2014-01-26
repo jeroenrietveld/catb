@@ -23,6 +23,8 @@ class LessonPagesController < ApplicationController
         else
           q.correct = "false";
         end
+
+        q.answer = answer.id
       end
     end
   end

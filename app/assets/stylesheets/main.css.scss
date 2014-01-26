@@ -1,4 +1,5 @@
 @import url(http://fonts.googleapis.com/css?family=Hammersmith+One);
+@import url(http://fonts.googleapis.com/css?family=Goudy+Bookletter+1911);
 
 body {
 	font-family: "Hammersmith One";
@@ -101,6 +102,8 @@ header {
 		.chapter-list {
 			list-style-type: none;
 			text-align: center;
+			width: 760px;
+			margin: 0 auto;
 
 			.chapter-list-item {
 				margin: 0;
@@ -109,6 +112,7 @@ header {
 				padding: 10px;
 				height: 20px;
 				float: left;
+				margin: 0px 10px;
 				background-color: darken(#4ED487, 10%);
 
 				a {
@@ -132,6 +136,22 @@ header {
 	}
 	h4 {
 		font-size: 18px;
+	}
+
+	.lesson {
+		padding: 20px 0;
+		width: 600px;
+		margin: 0 auto;
+
+		h4 {
+			padding: 5px;
+			background-color: darken(#FFF, 8%);
+		}
+
+		p {
+			padding: 5px 5px 5px 15px;
+			background-color: darken(#FFF, 5%);
+		}
 	}
 
 	.dropdown {
@@ -199,7 +219,7 @@ header {
 	}
 
 	.questions {
-		width: 500px;
+		width: 600px;
 		margin: 0 auto;
 
 		.question {
@@ -207,6 +227,7 @@ header {
 
 			.answer {
 				display: block;
+				font-family: 'Goudy Bookletter 1911', Helvetica, Arial, sans-serif;
 			}
 		}
 	}
@@ -218,6 +239,12 @@ header {
 	.incorrect {
 		background-color: #FAA;
 	}
+}
+
+p {
+	font-family: 'Goudy Bookletter 1911', Helvetica, Arial, sans-serif;
+    font-size: 15px;
+    line-height: 25px;
 }
 
 .clear {

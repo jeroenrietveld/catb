@@ -10,7 +10,13 @@
 
 				<% q.answers.each do |a| %>
 					<div class="answer">
-						<%= radio_button_tag q.id, a.id %>
+						<!-- hack -->
+						<% if (q.correct == "true" or q.correct == "false") and q.answer == a.id %>
+							<%= radio_button_tag q.id, a.id, true %>
+						<% else %>
+							<%= radio_button_tag q.id, a.id %>
+						<% end %>
+						
 						<%= a.answer %>
 					</div>
 				<% end %>

@@ -5,17 +5,19 @@
 <nav>
 	<ul class="chapter-list">
 		<% @chapters.each do |c| %>
-			<li class="chapter-list-item"><%= link_to c.title, lesson_pages_lessons_path(c.id) %></li>		
+			<li class="chapter-list-item"><%= link_to c.title, lesson_pages_lessons_path(:chapter => c.id) %></li>		
 		<% end %>
 	</ul>
 </nav>
 
 <section id="content" class="clear">
-	<h3><%= @chapter.title %></h3>
-
 	<% @chapter.lessons.each do |l| %>
 		<div class="lesson">
-			<%= l.title %>
+			<h4><%= l.title %></h4>
+
+			<p>
+				<%= raw l.description %>
+			</p>
 		</div>
 	<% end %>
 </section>
