@@ -4,6 +4,8 @@ Catb::Application.routes.draw do
   get "lesson_pages/questions"
   get "lesson_pages/discussion"
 
+  post "lesson_pages/questions"
+  
   root :to => "lesson_pages#lessons"
 
   resources :comments

@@ -185,17 +185,38 @@ header {
 			border: none;
 			font-size: 16px;
 		}
+	}
 
-		input {
-			border: none;
-			height: 60px;
-			width: 150px;
-			background: darken(#4ED487, 10%);
-			color: #FFF;
-			font-size: 18px;
-			margin-top: 16px;
-			float: right;
+	input[type="submit"] {
+		border: none;
+		height: 60px;
+		width: 150px;
+		background: darken(#4ED487, 10%);
+		color: #FFF;
+		font-size: 18px;
+		margin-top: 16px;
+		float: right;
+	}
+
+	.questions {
+		width: 500px;
+		margin: 0 auto;
+
+		.question {
+			padding: 10px 5px;
+
+			.answer {
+				display: block;
+			}
 		}
+	}
+
+	.correct {
+		background-color: #AFA;
+	}
+
+	.incorrect {
+		background-color: #FAA;
 	}
 }
 

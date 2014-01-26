@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140126184717) do
+ActiveRecord::Schema.define(version: 20140126192831) do
 
   create_table "answers", force: true do |t|
     t.string   "answer"
@@ -46,7 +46,7 @@ ActiveRecord::Schema.define(version: 20140126184717) do
   create_table "questions", force: true do |t|
     t.string   "question"
     t.integer  "answer"
-    t.boolean  "correct"
+    t.string   "correct",    default: "empty"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
