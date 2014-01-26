@@ -1,10 +1,18 @@
 Catb::Application.routes.draw do
-  get "lesson_pages/home"
-  get "lesson_pages/home/:chapter" => 'lesson_pages#home'
+  get "lesson_pages/lessons"
+  get "lesson_pages/lessons/:chapter" => 'lesson_pages#lessons'
   get "lesson_pages/questions"
   get "lesson_pages/discussion"
 
-  root :to => "lesson_pages#home"
+  root :to => "lesson_pages#lessons"
+
+  resources :comments
+
+  namespace :api , :defaults => {:format => :json} do
+    resource :comments do
+      get ":lesson_id" => 'comments#byLesson'
+    end
+  end
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

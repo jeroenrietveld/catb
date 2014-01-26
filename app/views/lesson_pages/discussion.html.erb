@@ -1,0 +1,52 @@
+<header>
+	<h2>Discussion</h2>
+</header>
+
+<section id="content" class="clear">
+	
+	<p class="intro">
+		Select a lesson to discuss on
+	</p>
+
+	<div class="dropdown">
+		<%= collection_select(:lesson, :chapter_id, Lesson.all, :id, :title) %>
+	</div>
+
+	<div class="comments"></div>
+
+	<div class="post-comment">
+		<h4>Join the discussion</h4>
+		<%= form_for @comment do |f| %>
+			<%= f.text_area :comment, size: "50x12", placeholder: "Comment" %>
+			<%= hidden_field_tag(:lesson_id, "1") %>
+	  		<%= f.submit "Post comment" %>
+		<% end %>
+	</div>
+
+	<div class="clear"></div>
+</section>
+
+<script type="text/javascript">
+	$(document).ready(function(){
+		UpdateComments($('#lesson_chapter_id').find(":selected").val());
+
+		$("#lesson_chapter_id").change(function(e){
+			UpdateComments($(this).val());
+		});
+
+		function UpdateComments(id)
+		{
+			$("#lesson_id").val(id);
+
+			var url = '/api/comments/' + id + '.json';
+		
+			$.getJSON(url, function( data ) {
+				$(".comments").empty();
+
+				$.each(data, function(){
+					$(".comments").append("<div class='comment'><div class='content'>"+this['comment']+"</div><div class='timestamp'>"+this['created_at'].substr(0, 10)+"</div></div>");				
+				});
+			});
+		}
+	});
+</script>

@@ -1,5 +1,5 @@
 class LessonPagesController < ApplicationController
-  def home
+  def lessons
   	chapter = params[:chapter]
 
   	unless chapter
@@ -14,5 +14,6 @@ class LessonPagesController < ApplicationController
   end
 
   def discussion
+    @comment = Comment.new
   end
 end

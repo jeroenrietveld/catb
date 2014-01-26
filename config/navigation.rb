@@ -3,7 +3,7 @@
 SimpleNavigation::Configuration.run do |navigation|
   navigation.items do |primary|
 
-    primary.item :home, "Home", lesson_pages_home_path
+    primary.item :lessons, "Lessons", lesson_pages_lessons_path
     primary.item :questions, "Questions", lesson_pages_questions_path
     primary.item :discussion, "Discussion", lesson_pages_discussion_path
 

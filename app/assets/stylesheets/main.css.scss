@@ -54,7 +54,7 @@ header {
 			}
 		}
 
-		#home {
+		#lessons {
 			background-color: #17B4D9;
 			border-bottom: 4px solid darken(#17B4D9, 10%);
 		}
@@ -129,6 +129,73 @@ header {
 	h3 {
 		font-size: 20px;
 		text-align: center;
+	}
+	h4 {
+		font-size: 18px;
+	}
+
+	.dropdown {
+		width: 400px;
+		margin: 0 auto;
+
+		#lesson_chapter_id {
+			width: 100%;
+			text-align: center;
+			border: none;
+			font-size: 20px;
+			background-color: #F4F4F4;
+		    -webkit-appearance:none;
+		    -moz-appearance:none;
+		    appearance:none;
+		}
+	}
+
+	.intro {
+		text-align: center;
+		padding: 10px 0;
+	}
+
+	.comments {
+		.comment {
+			width: 500px;
+			margin: 10px auto;
+			background: #F4F4F4;
+
+			.content {
+				padding: 10px;
+				border-bottom: 1px solid #FFF;
+			}
+
+			.timestamp {
+				padding-top: 5px;
+				font-size: 12px;
+				padding: 4px;
+			}
+		}
+	}
+
+	.post-comment {
+		width: 500px;
+		margin: 0 auto;
+		padding: 20px 0 10px 0;
+		text-align: center;
+
+		textarea {
+			background: #F4F4F4;
+			border: none;
+			font-size: 16px;
+		}
+
+		input {
+			border: none;
+			height: 60px;
+			width: 150px;
+			background: darken(#4ED487, 10%);
+			color: #FFF;
+			font-size: 18px;
+			margin-top: 16px;
+			float: right;
+		}
 	}
 }
 
